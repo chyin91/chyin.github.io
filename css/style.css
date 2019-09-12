@@ -59,7 +59,7 @@ textarea {
 }
 .card + .card,
 .card + .column-right-shadow {
-  margin-top: 1.5rem;
+  margin-top: 15px;
 }
 .card.card-transparent {
   box-shadow: none;

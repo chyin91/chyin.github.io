@@ -184,7 +184,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        3
                     </p>
                 </div>
             </div>
@@ -194,7 +194,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        0
                     </p>
                 </div>
             </div>
@@ -204,7 +204,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        1
                     </p>
                 </div>
             </div>
@@ -268,25 +268,6 @@
         
         <article class="media">
             
-            <a href="/2019/09/11/first-article/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="测试日志">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-09-11T14:23:22.000Z">2019-09-11</time></div>
-                    <a href="/2019/09/11/first-article/" class="title has-link-black-ter is-size-6 has-text-weight-normal">测试日志</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/随笔/">随笔</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2019/09/11/article/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="article">
@@ -327,7 +308,7 @@
             
             <a href="/2019/09/10/testing/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/logo.png" alt="testing">
+                    <img class="thumbnail" src="/images/91201.png" alt="testing">
                 </p>
             </a>
             
@@ -354,15 +335,7 @@
                 分类
             </h3>
             <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/随笔/">
-            <span class="level-start">
-                <span class="level-item">随笔</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
+            
             </ul>
         </div>
     </div>
@@ -382,7 +355,7 @@
                     <span class="level-item">九月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -401,13 +374,6 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/JAVA/">
-                        <span class="tag">JAVA</span>
-                        <span class="tag is-grey">1</span>
-                    </a>
-                </div>
-                
-                <div class="control">
                     <a class="tags has-addons" href="/tags/测试/">
                         <span class="tag">测试</span>
                         <span class="tag is-grey">2</span>
@@ -424,158 +390,9 @@
 
                 <div class="col-lg-9 col-md-8 col-sm-8">
     <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-11T14:23:22.000Z">2019-09-11</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/随笔/">随笔</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6 分钟 读完 (大约 867 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/09/11/first-article/">测试日志</a>
-            
-        </h1>
-        <div class="content">
-            <html>
-<head>
-
-<title>Tetris</title>
-<script>window.resizeTo(410,450)</script>
-<style>
-<!--
-.MB
-{
-    BACKGROUND-COLOR: firebrick;
-    CURSOR: default;
-    HEIGHT: 22px;
-    WIDTH: 22px
-}
-.SB
-{
-    BACKGROUND-COLOR: slategray;
-    CURSOR: default;
-    HEIGHT: 22px;
-    WIDTH: 22px
-}
-.BK
-{
-    BACKGROUND-COLOR: white;
-    CURSOR: default;
-    HEIGHT: 22px;
-    WIDTH: 22px
-}
-.GT
-{
-    BORDER-BOTTOM: deepskyblue thin solid;
-    BORDER-LEFT: deepskyblue thin solid;
-    BORDER-RIGHT: deepskyblue thin solid;
-    BORDER-TOP: deepskyblue thin solid;
-    CURSOR: default
-}
--->
-</style>
-<script>
-<!--
-var BX=new Array(4);
-var BY=new Array(4);
-var PX=new Array(4);
-var PY=new Array(4);
-var mTimer
-var firstView
-var gameState = 0;
-
-<p>function beginGame()<br>{<br>    gameState=0;<br>    speed=1;<br>    outTime=1100-speed*100;<br>    score=0;<br>    if(gameState!=0)return;<br>    firstView=true;<br>    for(j=0;j&lt;16;j++)<br>        for(i=0;i&lt;10;i++)<br>            setClass(i,j,”BK”);<br>    randBar();<br>    gameState=1;<br>    Play.disabled=true;<br>    window.clearInterval(mTimer);<br>    mTimer=window.setInterval(“moveBar()”,outTime);<br>}</p>
-<p>function keyControl()<br>{<br>    if(gameState!=1)return;<br>    switch(event.keyCode){<br>        case 37:{    //left<br>            for(i=0;i&lt;4;i++)if(BX[i]==0)return;<br>            for(i=0;i&lt;4;i++)if(getClass(BX[i]-1,BY[i])==”SB”)return;<br>            for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”BK”);<br>            for(i=0;i&lt;4;i++)BX[i]=BX[i]-1;<br>            for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”MB”);<br>            break;}<br>        case 38:{    //up<br>            var preMBarX=new Array(4);<br>            var preMBarY=new Array(4);<br>            var cx=Math.round((BX[0]+BX[1]+BX[2]+BX[3])/4);<br>            var cy=Math.round((BY[0]+BY[1]+BY[2]+BY[3])/4);<br>            for(i=0;i&lt;4;i++){<br>                preMBarX[i]=Math.round(cx-cy+BY[i]);<br>                preMBarY[i]=Math.round(cx+cy-BX[i]);<br>                if(preMBarX[i]&lt;0 || preMBarX[i]&gt;9 || preMBarY[i]&lt;0 || preMBarY[i]&gt;15)return;<br>                if(getClass(preMBarX[i],preMBarY[i])==”SB”)return;<br>            }<br>            for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”BK”);<br>            for(i=0;i&lt;4;i++){<br>                BX[i]=preMBarX[i];<br>                BY[i]=preMBarY[i];<br>            }<br>            for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”MB”);<br>            break;}<br>        case 39:{    //right<br>            for(i=0;i&lt;4;i++)if(BX[i]==9)return;<br>            for(i=0;i&lt;4;i++)if(getClass(BX[i]+1,BY[i])==”SB”)return;<br>            for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”BK”);<br>            for(i=0;i&lt;4;i++)BX[i]=BX[i]+1;<br>            for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”MB”);<br>            break;}<br>        case 40:{    //down<br>            moveBar();<br>            break;}<br>    }<br>}</p>
-<p>function delLine()<br>{<br>    for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”SB”);<br>    for(j=0;j&lt;16;j++){<br>        dLine=true;<br>        for(i=0;i&lt;10;i++){<br>            if(getClass(i,j)!=”SB”){<br>                dLine=false;<br>                break;<br>            }<br>        }<br>        if(dLine){<br>            score=score+100;<br>            for(k=j;k&gt;0;k–)<br>                for(l=0;l&lt;10;l++)<br>                    setClass(l,k,getClass(l,k-1));<br>            for(l=0;l&lt;10;l++)setClass(l,0,”BK”);<br>        }<br>    }<br>    randBar();<br>    speed=Math.floor(score/3000)+1;<br>    outTime=1100-speed*100;<br>    scoreBar.innerHTML=”Score : “ + score;<br>    speedBar.innerHTML=”Speed : “ + speed;<br>    window.clearInterval(mTimer);<br>    mTimer=window.setInterval(“moveBar()”,outTime);<br>}</p>
-<p>function getClass(x,y){return GameBar.children[y].children[x].className;}<br>function setClass(x,y,cName){GameBar.children[y].children[x].className=cName;}</p>
-<p>function moveBar()<br>{<br>    if(gameState!=1)return;<br>    dropLine=true;<br>    for(i=0;i&lt;4;i++)if(BY[i]==15)dropLine=false;<br>    if(dropLine)for(i=0;i&lt;4;i++)if(getClass(BX[i],BY[i]+1)==”SB”)dropLine=false;<br>    if(!dropLine){<br>        window.clearInterval(mTimer);<br>        delLine();<br>        return;<br>    }<br>    for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”BK”);<br>    for(i=0;i&lt;4;i++)BY[i]=BY[i]+1;<br>    for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”MB”);<br>}</p>
-<p>function pauseGame()<br>{<br>    if(gameState==0)return;<br>    if(event.srcElement.value==”Pause”){<br>        gameState=2;<br>        event.srcElement.value=”Continue”;<br>        window.clearInterval(mTimer);<br>    }<br>    else{<br>        gameState=1;<br>        event.srcElement.value=”Pause”;<br>        mTimer=window.setInterval(“moveBar()”,outTime);<br>    }<br>}</p>
-<p>function fMnu(){return false;}<br>document.oncontextmenu=fMnu;</p>
-<p>function preview()<br>{<br>    if(previewWnd.style.display!=”none”)<br>        previewWnd.style.display=”none”;<br>    else<br>        previewWnd.style.display=”block”;<br>}</p>
-<p>function replayGame()<br>{<br>    if(gameState!=1)return;<br>    if(!confirm(“Really want to re-start the game?”))return;<br>    gameState=0;<br>    window.clearInterval(mTimer);<br>    beginGame();<br>}<br>function randBar()<br>{<br>    randNum=Math.floor(Math.random()*20)+1;<br>    if(!firstView)<br>        for(i=0;i&lt;4;i++){<br>            BX[i]=PX[i];<br>            BY[i]=PY[i];<br>        }<br>    switch(randNum){<br>        case 1:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=4;<br>            PY[1]=1;<br>            PX[2]=5;<br>            PY[2]=1;<br>            PX[3]=6;<br>            PY[3]=1;<br>            break;}<br>        case 2:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=0;<br>            PX[2]=4;<br>            PY[2]=1;<br>            PX[3]=4;<br>            PY[3]=2;<br>            break;}<br>        case 3:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=0;<br>            PX[2]=6;<br>            PY[2]=0;<br>            PX[3]=6;<br>            PY[3]=1;<br>            break;}<br>        case 4:{<br>            PX[0]=5;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=1;<br>            PX[2]=5;<br>            PY[2]=2;<br>            PX[3]=4;<br>            PY[3]=2;<br>            break;}<br>        case 5:{<br>            PX[0]=6;<br>            PY[0]=0;<br>            PX[1]=6;<br>            PY[1]=1;<br>            PX[2]=4;<br>            PY[2]=1;<br>            PX[3]=5;<br>            PY[3]=1;<br>            break;}<br>        case 6:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=4;<br>            PY[1]=1;<br>            PX[2]=4;<br>            PY[2]=2;<br>            PX[3]=5;<br>            PY[3]=2;<br>            break;}<br>        case 7:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=4;<br>            PY[1]=1;<br>            PX[2]=5;<br>            PY[2]=0;<br>            PX[3]=6;<br>            PY[3]=0;<br>            break;}<br>        case 8:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=0;<br>            PX[2]=5;<br>            PY[2]=1;<br>            PX[3]=5;<br>            PY[3]=2;<br>            break;}<br>        case 9:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=0;<br>            PX[2]=5;<br>            PY[2]=1;<br>            PX[3]=6;<br>            PY[3]=1;<br>            break;}<br>        case 10:{<br>            PX[0]=5;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=1;<br>            PX[2]=4;<br>            PY[2]=1;<br>            PX[3]=4;<br>            PY[3]=2;<br>            break;}<br>        case 11:{<br>            PX[0]=4;<br>            PY[0]=1;<br>            PX[1]=5;<br>            PY[1]=1;<br>            PX[2]=5;<br>            PY[2]=0;<br>            PX[3]=6;<br>            PY[3]=0;<br>            break;}<br>        case 12:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=4;<br>            PY[1]=1;<br>            PX[2]=5;<br>            PY[2]=1;<br>            PX[3]=5;<br>            PY[3]=2;<br>            break;}<br>        case 13:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=0;<br>            PX[2]=6;<br>            PY[2]=0;<br>            PX[3]=5;<br>            PY[3]=1;<br>            break;}<br>        case 14:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=4;<br>            PY[1]=1;<br>            PX[2]=4;<br>            PY[2]=2;<br>            PX[3]=5;<br>            PY[3]=1;<br>            break;}<br>        case 15:{<br>            PX[0]=5;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=1;<br>            PX[2]=4;<br>            PY[2]=1;<br>            PX[3]=6;<br>            PY[3]=1;<br>            break;}<br>        case 16:{<br>            PX[0]=5;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=1;<br>            PX[2]=5;<br>            PY[2]=2;<br>            PX[3]=4;<br>            PY[3]=1;<br>            break;}<br>        case 17:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=0;<br>            PX[2]=4;<br>            PY[2]=1;<br>            PX[3]=5;<br>            PY[3]=1;<br>            break;}<br>        case 18:{<br>            PX[0]=4;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=0;<br>            PX[2]=4;<br>            PY[2]=1;<br>            PX[3]=5;<br>            PY[3]=1;<br>            break;}<br>        case 19:{<br>            PX[0]=3;<br>            PY[0]=0;<br>            PX[1]=4;<br>            PY[1]=0;<br>            PX[2]=5;<br>            PY[2]=0;<br>            PX[3]=6;<br>            PY[3]=0;<br>            break;}<br>        case 20:{<br>            PX[0]=5;<br>            PY[0]=0;<br>            PX[1]=5;<br>            PY[1]=1;<br>            PX[2]=5;<br>            PY[2]=2;<br>            PX[3]=5;<br>            PY[3]=3;<br>            break;}<br>    }<br>    if(firstView){<br>        firstView=false;<br>        randBar();<br>        return;<br>    }<br>    for(i=0;i&lt;4;i++){<br>        for(j=0;j&lt;4;j++){<br>            previewBar.children[j].children[i].className=”BK”;<br>        }<br>    }<br>    for(i=0;i&lt;4;i++)previewBar.children[PY[i]].children[PX[i]-3].className=”MB”;<br>    for(i=0;i&lt;4;i++){<br>        if(getClass(BX[i],BY[i])!=”BK”){<br>            alert(“Game Over!”);<br>            window.clearInterval(mTimer);<br>            Play.disabled=false;<br>            gameState=0;<br>            return;<br>        }<br>    }<br>    for(i=0;i&lt;4;i++)setClass(BX[i],BY[i],”MB”);<br>}<br>// –&gt;<br></script><br></head><p></p>
-<body bgcolor="#EAF0F8" onkeydown="return keyControl();" topmargin="10" leftmargin="10" rightmargin="10" bottommargin="0" scroll="no">
-<table border="0" width="100%" cellspacing="0" cellpadding="0" height="100%"><tr><td width="100%" height="100%" align="center">
-<table cellspacing="2" cellpadding="0" class="gt" border="0" bordercolor="#EAF0F8" bgcolor="#EAF0F8">
-<tr>
-<td valign="top">
-    <table cellspacing="0" cellpadding="0" class="gt" border="1" bordercolor="#EAF0F8" style>
-    <tbody id="GameBar">
-    <tr><td nowrap class="BK"> </td><td nowrap class="BK"> </td><td nowrap class="BK"> </td><td nowrap class="BK"> </td><td nowrap class="BK"> </td><td nowrap class="BK"> 
-    </td><td nowrap class="BK"> </td><td nowrap class="BK"> </td><td nowrap class="BK"> </td><td nowrap class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK">
-    </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> 
-    </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> 
-    </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> 
-    </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> 
-    </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr>
-    </tbody>
-    </table>
-</td>
-<td valign="top" align="center" style="padding: 10 10 0 10" bgcolor="#466285">
-    <table cellspacing="0" cellpadding="0" border="0">
-    <tr><td><font size="5" color="red" face="consolas">Tetris</font></td></tr>
-    </table>
-    <table id="previewWnd" cellspacing="0" cellpadding="0" class="gt" border="1" bordercolor="#EAF0F8" bgcolor="#EAF0F8" style="margin-top:15">
-    <tbody id="previewBar">
-    <tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr><tr><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td><td class="BK"> </td></tr>
-    </tbody>
-    </table>
-    <table cellspacing="3" cellpadding="0" border="0" style="margin-top:15">
-        <tr><td><input type="button" id="Play" style="font-family:Tahoma; font-size:9pt; width:100px" value="Play" onclick="return beginGame();"></td></tr>
-        <tr><td><input type="button" id="Pause" style="font-family:Tahoma; font-size:9pt; width:100px" value="Pause" onclick="return pauseGame();"></td></tr>
-        <tr><td><input type="button" id="Preview" style="font-family:Tahoma; font-size:9pt; width:100px" value="Preview" onclick="preview();"></td></tr>
-        <tr><td><input type="button" id="Replay" style="font-family:Tahoma; font-size:9pt; width:100px" value="Replay" onclick="replayGame();"></td></tr>
-    </table>
-    <table cellspacing="3" cellpadding="0" border="0" style="font-family:Tahoma; font-size:9pt; font-weight: bold; margin-top:10">
-        <tr><td id="scoreBar" style="color:#FFFFFF">Score : 0</td></tr>
-        <tr><td id="speedBar" style="color:#FFFFFF">Speed : 1</td></tr>
-    </table>
-</td>
-</tr>
-</table>
-</td></tr></table>
-</body>
-</html>
-<script>
-function unSel()
-{
-    document.execCommand("Unselect");
-    window.setTimeout("unSel()",100);
-}
-unSel();
-
-
-<p></script><p></p>
-
-        </div>
-        
-        
+    <div style="padding: 20px 20px 0px 20px;">
         
     </div>
-</div>
-
-
-
-
-
-
-    <div class="card">
-    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -600,6 +417,7 @@ unSel();
         </h1>
         <div class="content">
             
+                
         </div>
         
         
@@ -613,7 +431,9 @@ unSel();
 
 
     <div class="card">
-    
+    <div style="padding: 20px 20px 0px 20px;">
+        
+    </div>
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -638,6 +458,7 @@ unSel();
         </h1>
         <div class="content">
             <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+                
         </div>
         
         
@@ -659,13 +480,15 @@ unSel();
 
 
     <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/09/10/testing/" class="image is-7by1">
-            <img class="thumbnail" src="/images/logo.png" alt="testing">
-        </a>
+    <div style="padding: 20px 20px 0px 20px;">
+        
+        <div class="card-image">
+            <a href="/2019/09/10/testing/" class="image is-7by1">
+                <img style="border:0px;" class="thumbnail" src="/images/91201.png" alt="testing">
+            </a>
+        </div>
+        
     </div>
-    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -676,7 +499,7 @@ unSel();
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 读完 (大约 1355 个字)
+                    9 分钟 读完 (大约 1391 个字)
                 </span>
                 
                 
@@ -689,8 +512,8 @@ unSel();
             
         </h1>
         <div class="content">
-            <p><img src="https://www.mdeditor.com/images/logos/markdown.png" alt="markdown" title="markdown"></p>
-<h1 id="欢迎使用-Markdown在线编辑器-MdEditor"><a href="#欢迎使用-Markdown在线编辑器-MdEditor" class="headerlink" title="欢迎使用 Markdown在线编辑器 MdEditor"></a>欢迎使用 Markdown在线编辑器 MdEditor</h1>
+            <p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.</p>
+                
         </div>
         
         

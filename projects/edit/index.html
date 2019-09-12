@@ -8,8 +8,7 @@
 	<script src="editormd/editormd.js"></script>
 </head>
 <body>
-<input type="button" name="back" value="返回" onclick="javascript:history.back(-1);"/>
-<div id="layout">
+<div id="layout" style="position: absolute;top: 0px;bottom: 0px;left: 0px;right: 0px;overflow: hidden;">
      <div id="test-editormd">
           <textarea style="display:none;"></textarea>
       </div>
@@ -19,9 +18,36 @@
    $(function() {
        var testEditor = editormd("test-editormd", {
            width: "100%",
-           height: 640,
+           height: "100%",
            markdown : "",
            path : 'editormd/lib/',
+           toolbarIcons : function() {
+	            // Or return editormd.toolbarModes[name]; // full, simple, mini
+	            // Using "||" set icons align right.
+	            return ["undo","redo","|","bold","del","italic","quote","ucwords","uppercase","lowercase","|","h1","h2","h3","h4","h5","h6","|","list-ul","list-ol","hr","|","link","reference-link","code","preformatted-text","code-block","table","datetime","html-entities","pagebreak","|","goto-line","watch","preview","fullscreen","clear","search","|","back"]
+	        },
+	     
+
+
+	        // 用于增加自定义工具栏的功能，可以直接插入HTML标签，不使用默认的元素创建图标
+	        toolbarCustomIcons : {
+	            back   : "<a onclick='javascript:history.back(-1);' >返回</a>",
+	        },
+	       
+	        // 自定义工具栏按钮的事件处理
+	        toolbarHandlers : {
+	            /**
+	             * @param {Object}      cm         CodeMirror对象
+	             * @param {Object}      icon       图标按钮jQuery元素对象
+	             * @param {Object}      cursor     CodeMirror的光标对象，可获取光标所在行和位置
+	             * @param {String}      selection  编辑器选中的文本
+	             */
+	            /*back : function() {
+	                history.back(-1);
+	            }*/
+	        },
+
+
            //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为 true
            //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为 true
            //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为 true
